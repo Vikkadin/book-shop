@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat-Bold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Cinzen';
+    src: url("../assets/fonts/Cinzel-Bold.ttf");
+    font-weight: 700;
+}
+
+:root {
+    --brown: rgb(71, 34, 20);
+    --beige: #F2E4CC;
+    --dry-send: #F4DDBA;
+    --light-text: #97827B;
+    --light-beige: #F9F3EE;
+    --wet-send: #D6A660;
+    --shadow-down: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    --shadow-up: 0px -4px 2px rgba(0, 0, 0, 0.25);
+    --error: #ce0202;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-image: url("../assets/images/library_bg.jpg");
+    background-size: cover;
+    color: var(--brown);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.scrollblock {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+h1,
+h3 {
+    text-align: center;
+    color: var(--brown);
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Cinzen';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 10px;
+    color: var(--light-beige);
+}
+
+p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--color-dark);
+    margin: 0;
+    margin-bottom: 25px;
+}
