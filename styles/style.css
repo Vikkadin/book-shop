@@ -78,3 +78,319 @@ p {
     margin: 0;
     margin-bottom: 25px;
 }
+
+.button {
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin: 26px 0px 26px 32px;
+    border: none;
+    box-shadow: var(--shadow-down);
+    color: var(--brown);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    background-color: var(--light-beige);
+}
+
+.button:enabled:hover {
+    background-color: var(--dry-send);
+    font-size: 14px;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.content-wrapper {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.header {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    padding: 10px 40px 7px;
+    background-color: var(--wet-send);
+    border-radius: 0px 0px 30px 30px;
+    box-shadow: var(--shadow-down);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-img {
+    flex: 0 0 40px;
+    height: 42px;
+    width: 42px;
+    background-image: url("../assets/icons/books-logo.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.header__title {
+    flex: 0 0 320px;
+}
+
+.header__title h1 {
+    font-family: "Cinzen";
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    text-align: center;
+    padding: 6px 0px 0px 8px;
+}
+
+.header__title h3 {
+    font-family: "Cinzen";
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: var(--brown);
+}
+
+.header__bag {
+    flex: 0 0 54px;
+    height: 90px;
+    background-image: url("../assets/icons/shopping-bag.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    align-items: flex-start;
+}
+
+.shopping-bag {
+    flex: 0 0 250px;
+    z-index: 200;
+    position: sticky;
+    position: absolute;
+    right: 110px;
+    top: 79px;
+    width: 368px;
+    height: auto;
+    background: var(--dry-send);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px 0px 30px 30px;
+    padding: 20px;
+}
+
+.shopping-bag h3 {
+    font-family: "Cinzen";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 38px;
+    text-align: center;
+    color: var(--brown);
+    margin-top: 20px;
+}
+
+.bag-line {
+    width: 280px;
+    height: 2px;
+    background-color: var(--brown);
+    margin-left: 28px;
+    margin-top: 12px;
+}
+
+.shopping-bag p {
+    margin: 20px 28px 40px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.shopping-bag .button {
+    text-align: center;
+    display: block;
+    margin: 16px 10px 20px 180px;
+    width: auto;
+}
+
+.shopping-bag .button:hover {
+    background-color: var(--wet-send);
+    font-size: 15px;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.shopping-bag__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 28px;
+    margin-bottom: 42px;
+}
+
+.item__img {
+    width: 78px;
+    height: 102px;
+    filter: drop-shadow(11px 6px 9px rgba(0, 0, 0, 0.25));
+}
+
+.item__title-author {
+    width: 110px;
+}
+
+.item__title {
+    font-family: 'Cinzen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--brown);
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.item__author {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--brown);
+}
+
+.item__price {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--brown);
+}
+
+.remove {
+    flex: 0 0 20px;
+    width: 24px;
+    height: 24px;
+    background-image: url(../assets/icons/cross-mark.svg);
+    background-size: 22px 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.remove:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--brown);
+    margin-bottom: 10px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.catalog {
+    order: 1;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+
+.books-container {
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 90px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 7px;
+    width: 260px;
+    height: auto;
+    background-color: var(--light-beige);
+    border-radius: 30px;
+    box-shadow: var(--shadow-down);
+}
+
+.book-cover {
+    filter: drop-shadow(11px 6px 9px rgba(0, 0, 0, 0.25));
+    height: 170px;
+    width: auto;
+    margin: 0px auto;
+    cursor: pointer;
+}
+
+.book-title {
+    margin: 10px 8px 4px 8px;
+    font-family: 'Cinzen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--brown);
+    text-align: center;
+}
+
+.book-author {
+    margin: 0px 8px 10px 8px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    color: var(--brown);
+    text-align: center;
+}
+
+
+.book-price span {
+    order: 0;
+    margin-left: -140px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    color: var(--brown);
+    background-color: var(--wet-send);
+    box-shadow: var(--shadow-down);
+    padding: 5px 18px;
+    border-radius: 10px;
+}
+
+.button-block {
+    width: 280px;
+    height: auto;
+    background-color: var(--wet-send);
+    box-shadow: var(--shadow-up);
+    border-radius: 20px;
+
+}
