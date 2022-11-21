@@ -137,6 +137,52 @@ function addItemToBag(book, bag) {
     bag.appendChild(bookItem);
 }
 
+function createPopupWindow() {
+    const popup = createElement("div", "popup");
+    addNewElement(popup, "div", "popup__img");
+    const content = createElement("div", "popup__content");
+    addNewElement(content, "h4", "popup__price", "Price");
+    addNewElement(content, "h3", "popup__author", "Author");
+    addNewElement(content, "h2", "popup__title", "Title");
+    addNewElement(content, "p", "popup__description", "Description");
+    popup.appendChild(content);
+    addNewElementWithAction(popup, "div", "close", togglePopup);
+    return popup;
+}
+
+function togglePopup(event) {
+    const clickedItem = event.target.closest(".book-card");
+    const popup = document.getElementsByClassName("popup")[0];
+    const popupShadow = document.getElementsByClassName("popup-shadow")[0];
+    if (clickedItem) {
+        let book = booksArray.find((el) => el.id === Number(clickedItem.id));
+        let img = popup.getElementsByClassName("popup__img")[0];
+        img.style.backgroundImage = `url(./assets/images/${book.imageLink})`;
+        let title = popup.getElementsByClassName("popup__title")[0];
+        title.innerHTML = book.title;
+        let author = popup.getElementsByClassName("popup__author")[0];
+        author.innerHTML = book.author;
+        let description = popup.getElementsByClassName("popup__description")[0];
+        description.innerHTML = book.description;
+        let price = popup.getElementsByClassName("popup__price")[0];
+        price.innerHTML = `<span>$ ${book.price}</span>`;
+    }
+    popup.classList.toggle("open");
+    popupShadow.classList.toggle("active");
+}
+
+function addItemToBag(book, bag) {
+    const bookItem = createElement("div", "shopping-bag__item");
+    addNewImageElement(bookItem, "item__img", book.imageLink, book.title);
+    const titleAndAuthor = createElement("div", "item__title-author");
+    addNewElement(titleAndAuthor, "h4", "item__title", book.title);
+    addNewElement(titleAndAuthor, "h4", "item__author", book.author);
+    bookItem.appendChild(titleAndAuthor);
+    addNewElement(bookItem, "h4", "item__price", `$${book.price}`);
+    addNewElement(bookItem, "div", "remove");
+    bag.appendChild(bookItem);
+}
+
 function createFooter() {
     const footer = createElement("footer", "footer");
     addNewElement(footer, "p", "copyright", "© 11.2022 Coded and Designed by Vika Kelii || RS School")

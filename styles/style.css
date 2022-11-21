@@ -404,3 +404,124 @@ p {
     margin-top: 20px;
     color: var(--light-beige);
 }
+
+.popup-shadow {
+    opacity: 0;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    background-color: rgba(27, 8, 2, 0.7);
+}
+
+.popup-shadow.active {
+    opacity: 1;
+    height: 100vh;
+    width: 100vw;
+    z-index: 300;
+}
+
+.popup {
+    display: none;
+    transition: all 1s ease 0s;
+    background-color: var(--wet-send);
+    border-radius: 30px;
+}
+
+.popup.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: calc((100vw - 600px) / 2);
+    top: calc((100vh - 730px) / 2);
+    width: 560px;
+    height: auto;
+    z-index: 500;
+}
+
+.popup.open span {
+    position: fixed;
+    left: calc((100vw - 400px) / 2 - 45px);
+    top: calc((100vh - 710px) / 2 + 5px);
+    z-index: 700;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    color: var(--light-beige);
+    background-color: var(--brown);
+    box-shadow: var(--shadow-down);
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+
+.popup.open h3 {
+    margin: 0 auto;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--brown);
+}
+
+.popup.open h2 {
+    margin: 0 auto;
+    font-family: 'Cinzel';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    color: var(--brown);
+}
+
+.popup.open .close {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    box-shadow: var(--shadow-down);
+    background-color: var(--dry-send);
+    border-radius: 10px;
+    background-image: url(../assets/icons/cross-mark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 30px;
+    position: fixed;
+    left: calc((100vw + 460px) / 2 - 45px);
+    top: calc((100vh - 720px) / 2 + 5px);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover {
+    transform: scale(1.1);
+}
+
+.popup__img {
+    flex: 0 0 360px;
+    width: 250px;
+    height: auto;
+    z-index: 600;
+    background-image: url(../assets/images/DavidHerman_Effective_JavaScript.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(11px 6px 9px rgba(0, 0, 0, 0.25))
+}
+
+.popup__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+    padding: 100px 30px 10px;
+    color: var(--brown);
+    background-color: var(--beige);
+    margin: -100px 30px 20px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-down);
+}
