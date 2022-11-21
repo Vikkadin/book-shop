@@ -136,3 +136,9 @@ function addItemToBag(book, bag) {
     addNewElement(bookItem, "div", "remove");
     bag.appendChild(bookItem);
 }
+
+function createFooter() {
+    const footer = createElement("footer", "footer");
+    addNewElement(footer, "p", "copyright", "© 11.2022 Coded and Designed by Vika Kelii || RS School")
+    return footer;
+}

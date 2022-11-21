@@ -394,3 +394,13 @@ p {
     border-radius: 20px;
 
 }
+
+.footer {
+    border-top: 1px solid var(--dry-send);
+}
+
+.footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--light-beige);
+}
