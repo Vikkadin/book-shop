@@ -171,20 +171,11 @@ function togglePopup(event) {
     popupShadow.classList.toggle("active");
 }
 
-function addItemToBag(book, bag) {
-    const bookItem = createElement("div", "shopping-bag__item");
-    addNewImageElement(bookItem, "item__img", book.imageLink, book.title);
-    const titleAndAuthor = createElement("div", "item__title-author");
-    addNewElement(titleAndAuthor, "h4", "item__title", book.title);
-    addNewElement(titleAndAuthor, "h4", "item__author", book.author);
-    bookItem.appendChild(titleAndAuthor);
-    addNewElement(bookItem, "h4", "item__price", `$${book.price}`);
-    addNewElement(bookItem, "div", "remove");
-    bag.appendChild(bookItem);
-}
-
 function createFooter() {
     const footer = createElement("footer", "footer");
     addNewElement(footer, "p", "copyright", "© 11.2022 Coded and Designed by Vika Kelii || RS School")
     return footer;
 }
+
+
+
