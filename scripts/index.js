@@ -34,13 +34,13 @@ function createHeader() {
 	const title = createElement("div", "header__title");
 	const name = createElement("div", "page-name");
 	const bag = createElement("div", "header__bag");
-	addNewElement(title, "h1", "", "Books Shop");
+	header.appendChild(bag);
+	header.appendChild(name);
+	header.appendChild(div);
+	addNewElement(title, "h1", "", "BookShop");
 	addNewElement(name, "h2", "", "JavaScript");
 	div.appendChild(logo);
 	div.appendChild(title);
-	header.appendChild(div);
-	header.appendChild(name);
-	header.appendChild(bag);
 	return header;
 }
 
@@ -49,8 +49,8 @@ function createMain() {
 	const bag = createBag();
 	const catalog = createCatalog();
 	const popup = createPopupWindow();
-	main.appendChild(bag);
 	main.appendChild(catalog);
+	main.appendChild(bag);
 	addNewElementWithAction(main, "div", "popup-shadow", togglePopup);
 	main.appendChild(popup);
 	return main;
