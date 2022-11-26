@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/icons/books-logo.ico" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Books Shop</title>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <header class="header">
+            <div class="header__logo">
+                <div class="header__logo-img"></div>
+                <a href="./index.html">
+                    <div class="header__title">
+                        <h1>Books Shop</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="page-name">
+                <h2 class="form__title">Order page</h2>
+            </div>
+            <div class="header__bag"></div>
+        </header>
+
+        <div class="order__content">
+            <form action="" name="order" class="order dialog">
+                <div class="form__items">
+                    <label for="name" class="form__info-caption">Name*</label>
+                    <div class="form__info">
+                        <input type="text" name="name" class="form__info-input" placeholder="Harry" required autofocus>
+                    </div>
+                    <label for="surname" class="form__info-caption">Surname*</label>
+                    <div class="form__info">
+                        <input type="text" name="surname" class="form__info-input" placeholder="Potter" required>
+                    </div>
+                    <label for="date" class="form__info-caption">Delivery date*</label>
+                    <div class="form__info">
+                        <input type="date" name="date" class="form__info-input" required>
+                    </div>
+                    <label for="street" class="form__info-caption">Street*</label>
+                    <div class="form__info">
+                        <input type="text" name="street" class="form__info-input" placeholder="Privet Drive" required>
+                    </div>
+                    <label for="house" class="form__info-caption">House Number*</label>
+                    <div class="form__info">
+                        <input type="number" name="house" min="1" class="form__info-input" placeholder="4" required>
+                    </div>
+                    <label for="flat" class="form__info-caption">Flat Number*</label>
+                    <div class="form__info">
+                        <input type="text" name="flat" class="form__info-input" placeholder="1" required>
+                    </div>
+                    <label class="form__info-caption">Payment type*</label>
+                    <div class="form__payment-group">
+                        <label for="cash" class="form__info-caption">Cash <input type="radio" name="payment"
+                                value="Cash" id="cash" class="form__radio"></label>
+                        <label for="card" class="form__info-caption">Card <input type="radio" name="payment"
+                                value="Card" id="card" checked class="form__radio"></label>
+                    </div>
+                    <label for="gift1" class="form__info-caption">Choose Gift 1</label>
+                    <div class="form__drop-down-wrap">
+                        <select name="gift1" id="gift1" class="form__info-input form__info-input_drop-down">
+                            <option value="none">-</option>
+                            <option value="pack">Pack as a gift</option>
+                            <option value="postcard">Add postcard</option>
+                            <option value="pen">Branded pen or pencil</option>
+                            <option value="discount">Provide 2% discount to the next time</option>
+                        </select>
+                    </div>
+                    <label for="gift2" class="form__info-caption">Choose Gift 2</label>
+                    <div class="form__drop-down-wrap">
+                        <select name="gift2" id="gift2" class="form__info-input form__info-input_drop-down">
+                            <option value="none">-</option>
+                            <option value="pack">Pack as a gift</option>
+                            <option value="postcard">Add postcard</option>
+                            <option value="pen">Branded pen or pencil</option>
+                            <option value="discount">Provide 2% discount to the next time</option>
+                        </select>
+                    </div>
+                </div>
+                <input type="submit" name="submit" class="button form__complete-button" value="Complete" disabled>
+                <div class="close-button" onclick="location.href = '../../index.html'"></div>
+            </form>
+            <div class="personal-info dialog">
+                <div class="personal-info__content">
+                    <div class="personal-info__title">Thanks for choosing us!<br> Please check your personal
+                        information</div>
+                    <div class="personal-info__summary">
+                        <div class="personal-info__item-type">Recipient's Name :</div>
+                        <div class="personal-info__item-value" id="name"></div>
+                        <div class="personal-info__item-type">Delivery address :</div>
+                        <div class="personal-info__item-value" id="address"></div>
+                        <div class="personal-info__item-type">Delivery date :</div>
+                        <div class="personal-info__item-value" id="date"></div>
+                        <div class="personal-info__item-type">Payment Type :</div>
+                        <div class="personal-info__item-value" id="payment"></div>
+                        <div class="personal-info__item-type">Selected Gifts :</div>
+                        <div class="personal-info__item-value" id="gifts"></div>
+                    </div>
+                    <button class="button personal-info__go-back" onclick="location.href = '../../index.html'">Continue
+                        Shopping</button>
+                    <div class="close-button" onclick="location.href = '../../index.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/order.js"></script>
+</body>
+
+</html>
